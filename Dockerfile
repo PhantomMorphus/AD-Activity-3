@@ -15,7 +15,7 @@ COPY --from=composer:2.6 /usr/bin/composer /usr/local/bin/composer
 
 COPY . /var/www/html/
 
-USER yourUsernameHere
+USER www-data
 
 EXPOSE 8000
 

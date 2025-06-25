@@ -1,8 +1,8 @@
 services:
-  web-app-php:
+  adtask3:
     build:
       context: .
-    container_name: web-app-php-service
+    container_name: adtask3-service
     ports:
       - "8000:8000"
     develop:
@@ -19,7 +19,7 @@ services:
 
   mongodb:
     image: mongo:latest
-    container_name: web-app-php-mongodb
+    container_name: adtask3-mongodb
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: rootPassword
@@ -27,11 +27,11 @@ services:
     ports:
       - "27111:27017"
     volumes:
-      - web-app-php-mongodb:/data/db/mongodb
+      - adtask3-mongodb:/data/db/mongodb
 
   postgresql:
     image: postgres:15
-    container_name: web-app-php-postgresql
+    container_name: adtask3-postgresql
     restart: always
     environment:
       POSTGRES_USER: user
@@ -40,10 +40,10 @@ services:
     ports:
       - "5112:5432"
     volumes:
-      - web-app-php-postgresql:/data/db/postgresql
+      - adtask3-postgresql:/data/db/postgresql
 
 volumes:
-  web-app-php-mongodb:
+  adtask3-mongodb:
     driver: local
-  web-app-php-postgresql:
+  adtask3-postgresql:
     driver: local
