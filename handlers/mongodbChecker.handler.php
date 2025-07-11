@@ -1,12 +1,16 @@
 <?php
 
+require_once BASE_PATH . '/utils/envSetter.util.php';
+
+$mongoUri = $typeConfig['mgURI'];
+
 try {
-    $mongo = new MongoDB\Driver\Manager("mongodb://host.docker.internal:27111"); 
+    $mongo = new MongoDB\Driver\Manager($mongoUri); 
 
     $command = new MongoDB\Driver\Command(["ping" => 1]);
-    $mongo->executeCommand("admin", $command);
+    $mongo->executeCommand($typeConfig['mgDB'], $command);
 
-    echo "✅ Connected to MongoDB successfully.  <br>";
+    echo "✅ Connected to MongoDB successfully. <br>";
 } catch (MongoDB\Driver\Exception\Exception $e) {
-    echo "❌ MongoDB connection failed: " . $e->getMessage() . "  <br>";
+    echo "❌ MongoDB connection failed: " . $e->getMessage() . " <br>";
 }

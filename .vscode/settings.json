@@ -1,19 +1,2 @@
 {
-    "dbcode.connections": [
-        {
-            "connectionId": "Z4ForkyOIJ355KbY6JlvF",
-            "name": "AD-Act-3_DB",
-            "driver": "postgres",
-            "connectionType": "host",
-            "host": "localhost",
-            "port": 5112,
-            "ssl": false,
-            "username": "user",
-            "password": "",
-            "savePassword": "secretStorage",
-            "database": "mydatabase",
-            "readOnly": false,
-            "connectionTimeout": 30
-        }
-    ]
 }

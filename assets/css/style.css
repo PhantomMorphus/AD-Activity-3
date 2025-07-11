@@ -3,8 +3,8 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
-    font-family: 'Segoe UI', sans-serif;
-    background: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f8f8;
     color: #eee;
     display: flex;
     align-items: center;
@@ -48,6 +48,15 @@ h1 {
     margin-bottom: 15px;
 }
 
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ccc;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
 form input {
     display: block;
     width: 100%;
@@ -83,4 +92,31 @@ button:hover {
 .message {
     margin-top: 10px;
     color: lightgreen;
+}
+
+nav {
+    background: #222;
+    color: #fff;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.error {
+    color: #fff;
+    background: #d9534f;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
 }

@@ -63,6 +63,10 @@
 This activity tests the connectivity of 2 Databases (PostgreSQL & MongoDB) and acts as a initialization to creating the website that will be implemented with Database.
 ### Key Components
 
+docker exec adtask3-service composer postgresql:reset
+docker exec adtask3-service composer postgresql:seed
+docker exec adtask3-service composer postgresql:migrate
+
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
 

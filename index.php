@@ -1,23 +1,27 @@
 <?php
-
-require_once __DIR__ . '/handlers/mongodbChecker.handler.php';
-require_once __DIR__ . '/handlers/postgreChecker.handler.php';
-
-
-
+require_once __DIR__ . '/bootstrap.php';
+require_once HANDLERS_PATH . '/mongodbChecker.handler.php';
+require_once HANDLERS_PATH . '/postgreChecker.handler.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AD Activity 3</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <h1>WTF</h1>
+    <?php include BASE_PATH . '/components/navbar.php'; ?>
+    <main>
+        <?php if (isset($_SESSION['user'])): ?>
+            <h1>
+                Welcome, <?= htmlspecialchars($_SESSION['user']['fName']) ?>!
+            </h1>
+            <p>Your role: <strong><?= htmlspecialchars($_SESSION['user']['role']) ?></strong></p>
+        <?php else: ?>
+            <h1>Welcome!</h1>
+            <p>Please <a href="?page=login">login</a> to continue.</p>
+        <?php endif; ?>
+    </main>
 </body>
 </html>
-
-
-
