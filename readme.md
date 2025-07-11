@@ -19,7 +19,7 @@
 
 <!-- TODO: Change the zyx-0314 into your github username  -->
 <!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-  
+
 ![](https://visit-counter.vercel.app/counter.png?page=PhantomMorphus/AD-Activity-3)
 
 [![wakatime](https://wakatime.com/badge/user/018ee6e8-9dc3-4d05-aa6a-529869d42a97/project/053db5ef-2c3d-45ca-ac61-f1cd841ceefd.svg)]
@@ -73,15 +73,15 @@ This activity tests the connectivity of 2 Databases (PostgreSQL & MongoDB) and a
 ### ! ! ! REMINDER ! ! !
 If typing these in the terminal and still doesn't work:
 
-composer postgresql:reset
-composer postgresql:seed
-composer postgresql:migrate
+- composer postgresql:reset
+- composer postgresql:seed
+- composer postgresql:migrate
 
 Type these instead since for some reason It does not detect the PDO PostgreSQL Driver:
 
-docker exec adtask3-service composer postgresql:reset
-docker exec adtask3-service composer postgresql:seed
-docker exec adtask3-service composer postgresql:migrate
+- docker exec adtask3-service composer postgresql:reset
+- docker exec adtask3-service composer postgresql:seed
+- docker exec adtask3-service composer postgresql:migrate
 
 for the Users that are accessible:
 
