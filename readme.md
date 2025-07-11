@@ -12,7 +12,7 @@
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  AD-Activity-3, Part 1 out of 3 of Implementation of Database in the Website
+  AD-Activity-3, Implementation of Database in the Website
 </div>
 
 <br />
@@ -63,16 +63,37 @@
 This activity tests the connectivity of 2 Databases (PostgreSQL & MongoDB) and acts as a initialization to creating the website that will be implemented with Database.
 ### Key Components
 
-docker exec adtask3-service composer postgresql:reset
-docker exec adtask3-service composer postgresql:seed
-docker exec adtask3-service composer postgresql:migrate
-
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
 
 - Docker
 - Postgre & MongoDB
 - Handlers
+
+### ! ! ! REMINDER ! ! !
+If typing these in the terminal and still doesn't work:
+
+composer postgresql:reset
+composer postgresql:seed
+composer postgresql:migrate
+
+Type these instead since for some reason It does not detect the PDO PostgreSQL Driver:
+
+docker exec adtask3-service composer postgresql:reset
+docker exec adtask3-service composer postgresql:seed
+docker exec adtask3-service composer postgresql:migrate
+
+for the Users that are accessible:
+
+John Smith - 
+   Username: john.smith
+   Password: p@ssW0rd1234
+
+Jane Doe -
+   Username: jane.doe
+   Password: securePass123
+
+
 ### Technology
 
 <!-- TODO: List of Technology Used -->
